@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data (raw data files can be large — use download script instead)
+data/raw/
+data/processed/
+
+# Trained models
+models/
+
+# Logs & results
+*.log
+runs/
+results/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TensorFlow / Keras
+*.h5
+*.keras
+*.pb
+
+# Coverage
+.coverage
+htmlcov/

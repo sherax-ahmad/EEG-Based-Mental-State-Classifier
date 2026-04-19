@@ -1,0 +1,33 @@
+# Sleep Stage Classification Configuration
+
+task: sleep
+n_classes: 5
+class_names: [Wake, N1, N2, N3, REM]
+
+# Data
+data_dir: data/processed
+data_file: data/processed/sleep_data.npy
+labels_file: data/processed/sleep_labels.npy
+sfreq: 100       # Sleep-EDF is sampled at 100 Hz
+
+# Preprocessing
+lowcut: 0.3
+highcut: 35.0
+notch_freq: 50.0
+epoch_length: 30.0    # Standard 30-second sleep epochs
+overlap: 0.0          # No overlap for sleep staging
+amplitude_threshold: 200.0
+
+# Feature extraction
+use_time_features: true
+use_frequency_features: true
+
+# Training
+test_size: 0.2
+val_size: 0.15
+random_state: 42
+
+# Deep learning
+epochs: 80
+batch_size: 64
+patience: 15

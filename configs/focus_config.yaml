@@ -1,0 +1,33 @@
+# Focus vs. Relaxed Classification Configuration
+
+task: focus
+n_classes: 2
+class_names: [Relaxed, Focused]
+
+# Data
+data_dir: data/processed
+data_file: data/processed/focus_data.npy
+labels_file: data/processed/focus_labels.npy
+sfreq: 160      # EEGMMIDB sampling rate
+
+# Preprocessing
+lowcut: 0.5
+highcut: 45.0
+notch_freq: 60.0    # US powerline frequency
+epoch_length: 4.0
+overlap: 0.5
+amplitude_threshold: 100.0
+
+# Feature extraction
+use_time_features: true
+use_frequency_features: true
+
+# Training
+test_size: 0.2
+val_size: 0.15
+random_state: 42
+
+# Deep learning
+epochs: 50
+batch_size: 32
+patience: 10

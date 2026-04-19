@@ -1,0 +1,1 @@
+"""EEG Mental State Classifier"""
